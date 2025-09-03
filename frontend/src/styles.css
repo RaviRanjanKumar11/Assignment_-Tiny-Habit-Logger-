@@ -1,0 +1,83 @@
+:root {
+  --bg: #0b0f14;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #22c55e;
+  --danger: #ef4444;
+  --border: #1f2937;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+.card {
+  width: 420px;
+  max-width: 92vw;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+h1 {
+  margin: 0 0 6px;
+  font-size: 1.4rem;
+  letter-spacing: 0.3px;
+}
+.muted { color: var(--muted); font-size: 0.9rem; margin-bottom: 16px; }
+.row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.streak {
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin: 16px 0 20px;
+}
+.day {
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  position: relative;
+}
+.day small {
+  position: absolute;
+  bottom: 6px;
+  font-size: 0.65rem;
+  color: var(--muted);
+}
+.done {
+  background: rgba(34,197,94,0.15);
+  outline: 2px solid var(--accent);
+}
+.btn {
+  flex: 1;
+  border: 1px solid var(--border);
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  background: #0f172a;
+  color: var(--text);
+  transition: transform 0.02s ease, background 0.2s ease;
+}
+.btn:hover { background: #131c34; }
+.btn:active { transform: translateY(1px); }
+.btn.primary { border-color: #19422a; background: #0f1d17; }
+.btn.primary:hover { background: #0f271b; }
+.btn.danger { border-color: #402020; background: #221015; }
+.btn.danger:hover { background: #2b1017; }
+.footer { color: var(--muted); font-size: 0.8rem; text-align: center; margin-top: 8px; }
